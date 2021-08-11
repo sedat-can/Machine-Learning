@@ -1,6 +1,7 @@
 # Machine-Learning
 House Price Prediction
 **Content**
+<b>
 1-  Project Paper
 2-  Code for processing image and textual data:
 3-  Code for processing textual data
