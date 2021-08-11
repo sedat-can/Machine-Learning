@@ -1,0 +1,967 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=Windows-1254">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>IJCAI Proceedings Template</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:FreeSans;}
+@font-face
+	{font-family:Bookman;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-indent:13.7pt;
+	text-autospace:ideograph-numeric;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.WW8Num1z0
+	{mso-style-name:WW8Num1z0;}
+span.WW8Num1z1
+	{mso-style-name:WW8Num1z1;}
+span.WW8Num1z2
+	{mso-style-name:WW8Num1z2;}
+span.WW8Num1z3
+	{mso-style-name:WW8Num1z3;}
+span.WW8Num1z4
+	{mso-style-name:WW8Num1z4;}
+span.WW8Num1z5
+	{mso-style-name:WW8Num1z5;}
+span.WW8Num1z6
+	{mso-style-name:WW8Num1z6;}
+span.WW8Num1z7
+	{mso-style-name:WW8Num1z7;}
+span.WW8Num1z8
+	{mso-style-name:WW8Num1z8;}
+span.WW8Num2z0
+	{mso-style-name:WW8Num2z0;
+	font-family:Symbol;}
+span.Fuentedeprrafopredeter1
+	{mso-style-name:"Fuente de párrafo predeter\.1";}
+span.Absatz-Standardschriftart
+	{mso-style-name:Absatz-Standardschriftart;}
+span.WW8NumSt1z0
+	{mso-style-name:WW8NumSt1z0;
+	font-family:Symbol;}
+span.WW-Fuentedeprrafopredeter
+	{mso-style-name:"WW-Fuente de párrafo predeter\.";}
+span.FootnoteCharacters
+	{mso-style-name:"Footnote Characters";
+	vertical-align:super;}
+span.Refdecomentario1
+	{mso-style-name:"Ref\. de comentario1";}
+span.Refdenotaalpie1
+	{mso-style-name:"Ref\. de nota al pie1";
+	vertical-align:super;}
+span.EndnoteCharacters
+	{mso-style-name:"Endnote Characters";
+	vertical-align:super;}
+span.WW-EndnoteCharacters
+	{mso-style-name:"WW-Endnote Characters";}
+span.Refdenotaalfinal1
+	{mso-style-name:"Ref\. de nota al final1";
+	vertical-align:super;}
+p.Heading, li.Heading, div.Heading
+	{mso-style-name:Heading;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.Index, li.Index, div.Index
+	{mso-style-name:Index;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.Epgrafe1, li.Epgrafe1, div.Epgrafe1
+	{mso-style-name:Epígrafe1;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+p.Text, li.Text, div.Text
+	{mso-style-name:Text;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.TitleofPaper, li.TitleofPaper, div.TitleofPaper
+	{mso-style-name:"Title of Paper";
+	margin-top:45.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:11.0pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.HeadingSection, li.HeadingSection, div.HeadingSection
+	{mso-style-name:"Heading\: Section";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	line-height:15.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.HeadingSubsection, li.HeadingSubsection, div.HeadingSubsection
+	{mso-style-name:"Heading\: Subsection";
+	margin-top:8.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:22.5pt;
+	text-indent:-22.5pt;
+	line-height:13.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.AbstractText, li.AbstractText, div.AbstractText
+	{mso-style-name:"Abstract Text";
+	margin-top:0cm;
+	margin-right:18.0pt;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.Extract, li.Extract, div.Extract
+	{mso-style-name:Extract;
+	margin-top:3.0pt;
+	margin-right:18.0pt;
+	margin-bottom:3.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.BulletedList, li.BulletedList, div.BulletedList
+	{mso-style-name:"Bulleted List";
+	margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:24.5pt;
+	text-align:justify;
+	text-indent:-14.4pt;
+	line-height:12.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.HeadingSubsubsection, li.HeadingSubsubsection, div.HeadingSubsubsection
+	{mso-style-name:"Heading\: Subsubsection";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:11.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.TitleContentAreas, li.TitleContentAreas, div.TitleContentAreas
+	{mso-style-name:"Title\: Content Areas";
+	margin-top:45.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:11.0pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.AffiliationandAddress, li.AffiliationandAddress, div.AffiliationandAddress
+	{mso-style-name:"Affiliation and Address";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:13.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.AbstractTitle, li.AbstractTitle, div.AbstractTitle
+	{mso-style-name:"Abstract Title";
+	margin-top:0cm;
+	margin-right:18.0pt;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-align:center;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.HeadingAcknowledgments, li.HeadingAcknowledgments, div.HeadingAcknowledgments
+	{mso-style-name:"Heading\: Acknowledgments";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	line-height:15.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.HeadingAppendix, li.HeadingAppendix, div.HeadingAppendix
+	{mso-style-name:"Heading\: Appendix";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	line-height:15.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.HeadingReferences, li.HeadingReferences, div.HeadingReferences
+	{mso-style-name:"Heading\: References";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	line-height:15.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.Verbatim, li.Verbatim, div.Verbatim
+	{mso-style-name:Verbatim;
+	margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:21.6pt;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:Bookman;
+	color:black;}
+p.CaptionsandLabels, li.CaptionsandLabels, div.CaptionsandLabels
+	{mso-style-name:"Captions and Labels";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.DescriptionItem, li.DescriptionItem, div.DescriptionItem
+	{mso-style-name:"Description Item";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:21.6pt;
+	text-align:justify;
+	text-indent:-21.6pt;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.Textocomentario1, li.Textocomentario1, div.Textocomentario1
+	{mso-style-name:"Texto comentario1";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.Author, li.Author, div.Author
+	{mso-style-name:Author;
+	margin-top:20.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:11.0pt;
+	page-break-after:avoid;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-weight:bold;}
+p.Referencetext, li.Referencetext, div.Referencetext
+	{mso-style-name:"Reference text";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:13.7pt;
+	text-align:justify;
+	text-indent:-13.7pt;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.Framecontents, li.Framecontents, div.Framecontents
+	{mso-style-name:"Frame contents";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.FrameContents0, li.FrameContents0, div.FrameContents0
+	{mso-style-name:"Frame Contents";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:ideograph-numeric;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p.TitledParagraph, li.TitledParagraph, div.TitledParagraph
+	{mso-style-name:"Titled Paragraph";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+span.TitledParagrah--Title
+	{mso-style-name:"Titled Paragrah -- Title";
+	font-weight:bold;}
+p.ExampleDefinition, li.ExampleDefinition, div.ExampleDefinition
+	{mso-style-name:"Example\/Definition";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;
+	font-style:italic;}
+span.ExampleDefinition--Heading
+	{mso-style-name:"Example\/Definition -- Heading";
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;}
+span.ExampleDefinition--Title
+	{mso-style-name:"Example\/Definition -- Title";
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none;}
+p.Proof, li.Proof, div.Proof
+	{mso-style-name:Proof;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:11.0pt;
+	text-autospace:ideograph-numeric;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+span.Proof-Heading
+	{mso-style-name:"Proof - Heading";
+	font-style:italic;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:54.0pt 54.0pt 90.0pt 54.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=EN-US link=blue vlink=purple style='text-justify-trim:
+punctuation'>
+
+<div class=WordSection1>
+
+<p class=AbstractTitle><img width=672 height=216
+src="project_dosyalar/image001.png"
+alt="House Price Prediction&#13;&#10;&#13;&#10;&#13;&#10;Sedat CAN&#13;&#10;Middle East Technical University&#13;&#10;e246579@metu.edu.tr&#13;&#10;&#13;&#10;"><br
+clear=ALL>
+Abstract</p>
+
+<p class=AbstractText>   Convolutional Neural Network, a popular branch of
+artificial intelligence, has been extensively developing to respond to the
+needs of house market by offering predictive models for estimation of house
+prices. Among many studies, this paper evaluates a simplified version of the
+CNN model used in (Ahmed, et al., 2016) and its dataset to get deeper understanding
+contemporary applications of CNN. As many studies rely on only textual
+attributes of houses, the model combines the data with visual inputs. Based on
+performance, the paper suggests that this combined model give better scores for
+the prediction of house prices and has potential to offer more.</p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>1-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Introduction</p>
+
+<p class=Text style='text-indent:10.1pt'>In recent years, brain inspired
+Convolutional Neural Networks (CNN) has become fastest growing area in
+artificial intelligence discipline due to the increase in computing capacities
+of computers. As many models, tools and methods have been developed and applied
+in different areas, the house price prediction attracts the attention of
+students of CNN since it entails well-structured models for processing both
+visual and textual data. Moreover, businesses in this competitive market demand
+these kinds of tools to facilitate transactions.</p>
+
+<p class=Text style='text-indent:10.1pt'>In this context, this paper would
+apply a CNN model to housing dataset containing visual and textual data in
+order to make a modest contribution to the literature. To this end, it would
+respond to the problem raised in paper titled “House price Estimation from
+visual and Textual Features” by Eman H. Ahmed and Mohamed Moustafa (Ahmed, et
+al., 2016). The paper deploys multilayer Neural Network (NN) model that
+estimates the house price by using textual and visual features and suggest that
+it outperforms other models in its predictive capacity.</p>
+
+<p class=Text style='text-indent:10.1pt'>Since there is not any publicly
+accessible code for the model, this paper tries to reconstruct the model in (Ahmed,
+et al., 2016)   and evaluates its performance. Nevertheless, the techniques and
+methods used in Ahmed et al.,’ model in the paper are not explicit and some
+tools, such as SURF, are licensed products. Therefore, the model reconstructed
+is simplified model, which do not give efficiently of the original model. Yet,
+from the results derived from the re-constructed model, the same argument can
+be concluded: the CNN model that provide betters results in comparison to the
+models that just processes textual data. </p>
+
+<p class=Text style='text-indent:10.1pt'>In this framework, the paper reviews
+current literature on House price estimation. Then, it analyzes the dataset
+used in the experiments. Finally, it provides the results of the experiments.</p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>2-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Related Works</p>
+
+<p class=Text style='text-indent:10.1pt'>As CNN is exponentially growing area,
+many studies have been done on house price prediction. The primary concern of
+studies on the issue is that as in real function of housing market, many
+features have been effecting prices the suggested models and datasets do not
+covers the facts of market. Visual data, in this respect, draws the attention
+of  contemporary studies. </p>
+
+<p class=Text style='text-indent:10.1pt'>In this context, Khamis et al in (Khamis
+et al., 2014) analyzes two machine-learning models, i.e., Multiple Linear
+Regression (MLR) and Neural Network models for the prediction of house prices
+and compare their performance. The paper proposes that among these models,
+Neural Network model provide better result: higher R square value and lower
+Mean Squared Error value on New York dataset. The paper uses dataset containing
+1047 houses from New York., composing of features including house price, living
+area, bedroom and bathroom numbers, lot size and age of house.<a href="#_ftn1"
+name="_ftnref1" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>[1]</span></span></span></a>  Yet, as Ahmed et al in (Ahmed et
+al., 2016) argues this work has a limitation that predicted price is not the
+actual price. This deficiency result from the fact that as many factors play
+role in prices of houses data could not contain all related features.<a
+href="#_ftn2" name="_ftnref2" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>[2]</span></span></span></a> </p>
+
+<p class=Text style='text-indent:10.1pt'>Similarly, Hong et al in (Hong et al.,
+2020) try to pay attention on the mismatch between datasets and real operation
+of housing market. For writers traditional models for house price prediction
+relies on the premise that the attributes and characteristics of a house
+determines the value of the house. Yet as these models are highly deployed for
+their simplicity, they are also criticized for the selection and interpretation
+of features, which are assumed separable and constant. For them, price in the
+real world snd relationship between features are more complex; Random Forest
+model has power to predict house price better.   In this respect, RF model
+enables to see the effect of each attribute on price in hierarchical structure
+and therefore does not require assumptions. Moreover, it has the advantage of
+high interpretability and can be trained easily and faster.<a href="#_ftn3"
+name="_ftnref3" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>[3]</span></span></span></a> </p>
+
+<p class=Text style='text-indent:10.1pt'>As above-mentioned works give very
+reliable models of price prediction, Ahmed et al give more advanced model by
+deploying CNN.</p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>3-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dataset Description</p>
+
+<p class=Text style='text-indent:10.1pt'>The housing price dataset is
+publically available on the address mentioned at the footnote.<a href="#_ftn4"
+name="_ftnref4" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>[4]</span></span></span></a>   The dataset contains 535 house
+samples collected in California State in the United State of America. The
+dataset has two kinds of information visual and textual. Visual data has the
+images of bedroom, bathroom, kitchen and exterior picture for each house
+sample. The resolution images are between 250x187 1484x1484. Textual data consists
+of the textual metadata of visual data that give information on number of
+bedrooms, number of bathrooms, area of the house, zip code and the price. The
+house prices are ranging from $22,000 to $5,858,000. The houses have maximum 7
+bathrooms and 10 bedrooms.</p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>4-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Proposed Baseline System</p>
+
+<p class=Text>    As the aim of the project is to apply a simplified version of
+the model provided in (Khamis et al., 2014), it uses CNN model. In this regard,
+it exploits the textual data of the dataset and processes them in CNN. Later, it
+deploys a combined model of CNN, which both use visual and textual data. Due to
+low score of model, different preprocessing tool are used to increase the
+predictability power of model. First, after the test of simple convolutional
+tools such as resizing, BRISK is applied. BRISK was preferred over SURF because
+of copyright issue.<a href="#_ftn5" name="_ftnref5" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>[5]</span></span></span></a>
+This tool enables to detect key points in image, which is applied to facilitate
+evaluations and comparison of the images. Secondly, histogram-equalization
+technique was applied on the images as proposed in (Khamis et al., 2014), which
+is used to adjusts the contrast of an image for easy detection. After these
+processes, the data is normalized.</p>
+
+<p class=Text style='text-indent:10.1pt'>&nbsp;</p>
+
+<p class=HeadingSubsection>        4.1- Artificial Neural Network</p>
+
+<p class=Text style='text-indent:10.1pt'>A neural network consists of
+processing units and connections (weights) between units.  The structure of
+neural network consists input layer, hidden layers, and the output layer, which
+has units connected with weights. Unit in a layer is connected with each units of
+next layer with a weight.<a href="#_ftn6" name="_ftnref6" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>[6]</span></span></span></a>
+</p>
+
+<p class=Text style='text-indent:10.1pt'>For the model five layers are used for
+visual data and two for textual data. Then, two layers are added to process
+these data together. To evaluate performance of the CNN, coefficient of
+determination (R2) and the Mean Squared Error (MSE) metrics are used.  </p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>5-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Experiments and Results</p>
+
+<p class=Text style='text-indent:10.1pt'>For the first CNN model, only
+attributes of images including bathroom, bedroom, and area were processed. 271 house
+samples, about 75 percent of the all data, was used to train model. The rest,
+91 samples were allocated for the test. The performance of the model was that</p>
+
+<p class=Text style='text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>MSE = 
+0.0014002646197979847 </p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>R2_score = 
+0.6081086826405384</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text>    In the second experiment images  were added to the data and
+applied to the model that processed textual data and images. The score was
+lower than the first model.</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>         MSE =  0.003167823730852289</p>
+
+<p class=Text>         R2_score =  0.3206482609990108</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>    In the third experiment, BRISK was added to model, which was
+set to detect about 200 key points in the image. Later, images were marked with
+flag for each detected point. The result was quite impressive. It improved
+score:</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>         MSE =  0.001958306778934648</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>R2_score = 
+0.5800337301568398</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text>    In the last experiment, histogram equalization is added to
+the model. The result of the experiment showed that histogram equalization
+improved R2 and MSE scores.</p>
+
+<p class=Text>For instance, it gave results above:</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text><img width=267 height=114 src="project_dosyalar/image002.jpg"
+align=left hspace=12></p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text style='margin-left:10.1pt;text-indent:10.1pt'>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text><img width=324 height=90 src="project_dosyalar/image003.jpg"
+align=left hspace=12></p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>&nbsp;</p>
+
+<p class=Text>In summary;</p>
+
+<p class=Text> </p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=0
+ style='width:249.7pt;margin-left:6.8pt;border-collapse:collapse;border:none'>
+ <tr style='height:24.9pt'>
+  <td width=65 valign=top style='width:41.8pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text align=left style='text-align:left'>&nbsp;</p>
+  <p class=Text align=left style='text-align:left'>&nbsp;</p>
+  </td>
+  <td width=47 valign=top style='width:35.2pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text align=left style='text-align:left'><b><span style='font-size:
+  9.0pt'>First Exp.</span></b></p>
+  </td>
+  <td width=79 valign=top style='width:62.05pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><b><span style='font-size:9.0pt'>Second Exp.</span></b></p>
+  </td>
+  <td width=66 valign=top style='width:51.35pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><b><span style='font-size:9.0pt'>Third Exp.</span></b></p>
+  </td>
+  <td width=76 valign=top style='width:59.3pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><b><span style='font-size:9.0pt'>Forth Exp.</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.2pt'>
+  <td width=65 valign=top style='width:41.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.2pt'>
+  <p class=Text><span style='font-size:9.0pt'>MSE</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.2pt'>
+  <p class=Text><sub>0.001400</sub></p>
+  </td>
+  <td width=79 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.2pt'>
+  <p class=Text><sub>0.003167</sub></p>
+  </td>
+  <td width=66 valign=top style='width:51.35pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.2pt'>
+  <p class=Text><sub>0.001958</sub></p>
+  </td>
+  <td width=76 valign=top style='width:59.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.2pt'>
+  <p class=Text><sub>0.0012481</sub></p>
+  <p class=Text><sub>0.0012780</sub></p>
+  </td>
+ </tr>
+ <tr style='height:24.9pt'>
+  <td width=65 valign=top style='width:41.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text>R2_score</p>
+  </td>
+  <td width=47 valign=top style='width:35.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><sub>0.608108</sub></p>
+  </td>
+  <td width=79 valign=top style='width:62.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><sub>0.320648</sub></p>
+  </td>
+  <td width=66 valign=top style='width:51.35pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><sub>0.320648</sub></p>
+  </td>
+  <td width=76 valign=top style='width:59.3pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:24.9pt'>
+  <p class=Text><sub>0.7323274</sub></p>
+  <p class=Text><sub>0.7259253</sub></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Text>&nbsp;</p>
+
+<p class=HeadingSection style='margin-left:36.0pt'>6-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Conclusion</p>
+
+<p class=Text>    As the project aimed to apply model provided by Ahmed et al
+by using house price dataset, it dealt with many challenges such as replacing
+SURF<a href="#_ftn7" name="_ftnref7" title=""><span class=MsoFootnoteReference><span
+class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>[7]</span></span></span></a> model with BRISK, finding a proper
+histogram equalization technique. Under these constraints, the usage of textual
+data in CNN model showed medium performance. However, adding raw visual data
+considerably deteriorated the performance of the model. However, after applying
+BRISK detector and histogram equalization, result of the model improved. As can
+be seen from the result of experiments, CNN model designed for textual and
+visual data provide better performance.</p>
+
+<p class=HeadingReferences style='margin-left:0cm;text-indent:0cm'>References</p>
+
+<p class=Referencetext>[Hong <i>et al</i>., 2020] Jengei Hong, Heeyoul Choi and
+Woo-sung Kim, “A House Price Valuation Based On The Random Forest Approach: The
+Mass Appraisal Of Residential Property In South Korea,” <i>International
+Journal of Strategic Property Management </i>24, no 3 (2020).</p>
+
+<p class=Referencetext>[Khamis et al., 2014] Azme Bin Khamis and Nur Khalidah
+Khalilah Binti Kamarudin, “Comparative Study On Estimate House Price Using
+Statistical and Neural Network Model,” <i>International Journal of Scientific
+&amp; Technology Research</i> 3, no 2 (December 2014)</p>
+
+<p class=Referencetext>[Ahmed et al., 2016] Eman H. Ahmed, Mohamed N. Moustafa,
+“House price estimation from visual and textual features”</p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=ftn1>
+
+<p class=MsoFootnoteText><a href="#_ftnref1" name="_ftn1" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[1]</span></span></span></a>
+Azme Bin Khamis and Nur Khalidah Khalilah Binti Kamarudin, “Comparative Study
+On Estimate House Price Using Statistical and  Neural Network Model,”
+International Journal of Scientific &amp; Technology Resarch 3, no 2 (December
+2014)</p>
+
+</div>
+
+<div id=ftn2>
+
+<p class=MsoFootnoteText><a href="#_ftnref2" name="_ftn2" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[2]</span></span></span></a>
+Eman H. Ahmed, Mohamed N. Moustafa, “House price estimation from visual and
+textual features,” in https://arxiv.org/abs/1609.08399v1</p>
+
+</div>
+
+<div id=ftn3>
+
+<p class=MsoFootnoteText><a href="#_ftnref3" name="_ftn3" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[3]</span></span></span></a>
+Jengei Hong, Heeyoul Choi and Woo-sung Kim, “A House Price Valuation Based On
+The Random Forest Approach: The Mass Appraisal Of Residential Property In South
+Korea,” International Journal of Strategic Property Management 24, no 3 (2020).</p>
+
+</div>
+
+<div id=ftn4>
+
+<p class=MsoFootnoteText><a href="#_ftnref4" name="_ftn4" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[4]</span></span></span></a>
+https://github.com/emanhamed/Houses-dataset</p>
+
+</div>
+
+<div id=ftn5>
+
+<p class=MsoFootnoteText><a href="#_ftnref5" name="_ftn5" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[5]</span></span></span></a>
+I did not know that SURF algorithm is licensed product.</p>
+
+</div>
+
+<div id=ftn6>
+
+<p class=MsoFootnoteText><a href="#_ftnref6" name="_ftn6" title=""><span
+class=MsoFootnoteReference><span class=MsoFootnoteReference><span
+style='font-size:9.0pt;font-family:"Times New Roman",serif;color:black'>[6]</span></span></span></a>
+Azme Bin Khamis and Nur Khalidah Khalilah Binti Kamarudin, “Comparative Study
+On Estimate House Price Using Statistical and  Neural Network Model,” <i>International
+Journal of Scientific &amp; Technology Research</i> 3, no 2 (December 2014)</p>
+
+</div>
+
+<div id=ftn7>
+
+<p class=MsoFootnoteText><a href="#_ftnref7" name="_ftn7" title=""></a>&nbsp;</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
